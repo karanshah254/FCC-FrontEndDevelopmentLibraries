@@ -384,3 +384,61 @@ Camper.propTypes = {
   name: PropTypes.string.isRequired
 };
 ```
+
+21. Create a Stateful Component
+```jsx
+class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName : "John"
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.firstName}</h1>
+      </div>
+    );
+  }
+};
+```
+
+22. Render State in the User Interface
+```jsx
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};
+```
+
+23. Render State in the User Interface Another Way
+```jsx
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    const name = this.state.name;
+    return (
+      <div>
+        <h1>{name}</h1>
+      </div>
+    );
+  }
+};
+```
